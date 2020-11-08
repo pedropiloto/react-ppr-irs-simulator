@@ -68,3 +68,15 @@ footer span {
 .copyrightsSpan {
     font-size: 12px;
 }
+
+.headerTitle{
+    text-align: left;
+    display: inline;
+    margin-right: 85%;
+}
+
+.headerQuestionMarkIcon{
+    text-align: right;
+    font-size: 30px;
+    cursor: pointer
+}
