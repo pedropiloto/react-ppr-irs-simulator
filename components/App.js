@@ -13,6 +13,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MoneyItem from '@material-ui/icons/Money';
 import Avatar from '@material-ui/core/Avatar';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Box from '@material-ui/core/Box';
 
 import Header from './Header';
 // import Footer from './Footer';
@@ -128,24 +129,24 @@ function App() {
       <Header />
       {/* eslint-disable-next-line react/jsx-no-duplicate-props */}
       <div className="root">
-        <Grid container spacing={1}>
-          <Grid item xs />
-          <Grid item xs={5}>
-            <Form
-              handleChangeAge={handleChangeAge}
-              handleChangeDependents={handleChangeDependents}
-              handleCollectableEarnings={handleCollectableEarnings}
-              handleTotalLimitedDeductions={handleTotalLimitedDeductions}
-              age={age}
-              dependents={dependents}
-              collectableEarnings={collectableEarnings}
-              totalLimitedDeductions={totalLimitedDeductions}
-              readyToSubmit={readyToSubmit}
-              handleSubmit={handleSubmit}
-            />
-          </Grid>
-          <Grid item xs />
-        </Grid>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Form
+            handleChangeAge={handleChangeAge}
+            handleChangeDependents={handleChangeDependents}
+            handleCollectableEarnings={handleCollectableEarnings}
+            handleTotalLimitedDeductions={handleTotalLimitedDeductions}
+            age={age}
+            dependents={dependents}
+            collectableEarnings={collectableEarnings}
+            totalLimitedDeductions={totalLimitedDeductions}
+            readyToSubmit={readyToSubmit}
+            handleSubmit={handleSubmit}
+          />
+        </Box>
         <Footer />
       </div>
       <Dialog
