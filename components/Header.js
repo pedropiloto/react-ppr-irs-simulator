@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import Money from '@material-ui/icons/AttachMoney';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
-import { withStyles } from '@material-ui/core/styles';
+import { faQuestionCircle, faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
@@ -15,6 +14,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import QuestionItem from '@material-ui/icons/Book';
 import Avatar from '@material-ui/core/Avatar';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import { Toolbar } from '@material-ui/core';
 
 const styles = (theme) => ({
   root: {
@@ -26,6 +26,18 @@ const styles = (theme) => ({
     color: '#FFFFFF',
     right: theme.spacing(1),
     top: theme.spacing(1),
+  },
+});
+
+const useStyles = makeStyles({
+  // This group of buttons will be aligned to the right
+  rightToolbar: {
+    marginLeft: 'auto',
+    marginRight: -12,
+  },
+  menuButton: {
+    marginRight: 16,
+    marginLeft: -12,
   },
 });
 
@@ -54,6 +66,9 @@ const DialogContent = withStyles((theme) => ({
 
 function Header() {
   const [open, setOpen] = React.useState(false);
+
+  const classes = useStyles();
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -64,15 +79,24 @@ function Header() {
   return (
     <>
       <header>
-        <span>
-          <h1 className="headerTitle">
-            <Money />
+        <Toolbar>
+          <IconButton
+            className={classes.menuButton}
+            aria-label="Menu"
+            color="inherit"
+          />
+          <Typography variant="title" color="white" className="headerTitle">
+            <FontAwesomeIcon icon={faDollarSign} />
             {' '}
             Reforço PPR
-          </h1>
-          <span className="headerQuestionMarkIcon"><FontAwesomeIcon icon={faQuestionCircle} onClick={handleOpen} /></span>
-        </span>
+          </Typography>
+
+          <section className={classes.rightToolbar}>
+            <span className="headerQuestionMarkIcon"><FontAwesomeIcon icon={faQuestionCircle} onClick={handleOpen} /></span>
+          </section>
+        </Toolbar>
       </header>
+
       <Dialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
