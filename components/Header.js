@@ -155,7 +155,7 @@ function Header() {
                   <QuestionItem />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Onde obter o total de deuduções sujeitas a limite?" secondary="Existem duas possibilidades, pode obtê-lo através da nota de liquidação do ultimo ano fiscal ou se a sua situação financeira for consideravelmente diferente deve calculá-lo tendo em conta as despesas que lhe são apresentadas no portal e-fatura para o corrente ano fiscal." />
+              <ListItemText primary="Onde obter o total de deduções sujeitas a limite?" secondary="Existem duas possibilidades, pode obtê-lo através da nota de liquidação do ultimo ano fiscal ou se a sua situação financeira for consideravelmente diferente deve calculá-lo tendo em conta as despesas que lhe são apresentadas no portal e-fatura para o corrente ano fiscal." />
             </ListItem>
           </List>
         </DialogContent>
