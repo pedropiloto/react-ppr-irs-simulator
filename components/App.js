@@ -186,7 +186,7 @@ function App() {
                   <MoneyItem />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Montante disponível para deduzido" secondary={`${result.deductionAmountAvailable} €`} />
+              <ListItemText primary="Montante disponível para ser deduzido" secondary={`${result.deductionAmountAvailable} €`} />
             </ListItem>
             <ListItem>
               <ListItemAvatar>
