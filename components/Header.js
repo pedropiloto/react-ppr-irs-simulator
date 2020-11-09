@@ -123,7 +123,7 @@ function Header() {
                   <QuestionItem />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Porque deve reforçar o seu PPR?" secondary="O PPR para além de ser um instrumento financeiro com propósito de geral rentabilidade a longo prazo, permite também ser deduzido no IRS segundo certos limites, podendo, desta forma, ajudar a que receba mais ou que pague menos." />
+              <ListItemText primary="Porque deve reforçar o seu PPR?" secondary="O PPR para além de ser um instrumento financeiro com propósito de gerar rentabilidade a longo prazo, permite obter benefícios fiscais como dedução no IRS segundo certos limites." />
             </ListItem>
             <ListItem>
               <ListItemAvatar>
@@ -139,7 +139,7 @@ function Header() {
                   <QuestionItem />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Compensa sempre?" secondary="Não, depende do limite global que e do total de despesas sjeitas a limite. O objetivo deste pequeno simulador é precisamente ajudar a perceber se na sua situação compensa." />
+              <ListItemText primary="Compensa sempre?" secondary="Não, depende do limite global do total de despesas sujeitas a limite. O objetivo deste pequeno simulador é precisamente ajudar a perceber se na sua situação compensa." />
             </ListItem>
             <ListItem>
               <ListItemAvatar>
@@ -147,7 +147,7 @@ function Header() {
                   <QuestionItem />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Onde obter o rendimento coletável?" secondary="Existem duas possibilidades, pode obtê-lo atravé da nota de liquidação do ultimo ano fiscal ou se a sua situação financeira é consideravelmente diferente deve calculá-lo tendo em conta o seu rendimento e as deduções especificas a que o mesmo está sujeito." />
+              <ListItemText primary="Onde obter o rendimento coletável?" secondary="Existem duas possibilidades, pode obtê-lo através da nota de liquidação do ultimo ano fiscal ou se a sua situação financeira for consideravelmente diferente deve calculá-lo tendo em conta o seu rendimento e as deduções especificas a que o mesmo está sujeito." />
             </ListItem>
             <ListItem>
               <ListItemAvatar>
@@ -155,7 +155,7 @@ function Header() {
                   <QuestionItem />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Onde obter o total de deuduções sujeitas a limite?" secondary="Existem duas possibilidades, pode obtê-lo através da nota de liquidação do ultimo ano fiscal ou se a sua situação financeira é consideravelmente diferente deve calculá-lo tendo em conta as despesas que lhe são apresentadas no portal e-fatura, fazendo uma projção daquilo que serão estimadamente as suas despesas do corrente ano fiscal." />
+              <ListItemText primary="Onde obter o total de deuduções sujeitas a limite?" secondary="Existem duas possibilidades, pode obtê-lo através da nota de liquidação do ultimo ano fiscal ou se a sua situação financeira for consideravelmente diferente deve calculá-lo tendo em conta as despesas que lhe são apresentadas no portal e-fatura para o corrente ano fiscal." />
             </ListItem>
           </List>
         </DialogContent>
