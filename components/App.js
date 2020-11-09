@@ -60,8 +60,8 @@ const DialogContent = withStyles((theme) => ({
 function App() {
   const [age, setAge] = useState(24);
   const [dependents, setDependents] = useState(0);
-  const [collectableEarnings, setCollectableEarnings] = useState(17701);
-  const [totalLimitedDeductions, setTotalLimitedDeductions] = useState(396);
+  const [collectableEarnings, setCollectableEarnings] = useState(20000);
+  const [totalLimitedDeductions, setTotalLimitedDeductions] = useState(696);
   const [result, setResult] = useState(2000);
   const [readyToSubmit, setReadyToSubmit] = useState(true);
   const [open, setOpen] = React.useState(false);
