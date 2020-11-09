@@ -15,9 +15,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Box from '@material-ui/core/Box';
 
 import Header from './Header';
-// import Footer from './Footer';
-import Form from './form';
-// eslint-disable-next-line no-unused-vars
+import Form from './Form';
 import { calc } from '../utils/utils';
 import Footer from './Footer';
 
@@ -120,13 +118,11 @@ function App() {
     const calcResult = calc(age, dependents, collectableEarnings, totalLimitedDeductions);
     setResult(calcResult);
     handleOpen();
-    console.log(result);
   }
 
   return (
     <div>
       <Header />
-      {/* eslint-disable-next-line react/jsx-no-duplicate-props */}
       <div className="root">
         <Box
           display="flex"

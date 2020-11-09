@@ -9,10 +9,7 @@ function Footer() {
   return (
     <footer>
       <span className="copyrightsSpan">
-        Copyright ⓒ
-        {year}
-        {' '}
-        Pedro Piloto
+        💰 👨‍✈️
       </span>
       <span className="socialButton">
         <Link href="https://www.linkedin.com/in/pedro-piloto/" target="_blank">
