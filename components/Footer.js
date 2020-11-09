@@ -5,11 +5,10 @@ import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 function Footer() {
-  const year = new Date().getFullYear();
   return (
     <footer>
       <span className="copyrightsSpan">
-        💰 👨‍✈️
+        👨‍✈️
       </span>
       <span className="socialButton">
         <Link href="https://www.linkedin.com/in/pedro-piloto/" target="_blank">
