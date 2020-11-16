@@ -1,7 +1,7 @@
 import React from 'react';
 import Router from 'next/router';
 import '../styles/globals.css';
-import * as gtag from 'common/src/lib/gtag';
+import * as gtag from '../lib/gtag';
 
 Router.events.on('routeChangeComplete', (url) => gtag.pageview(url));
 
