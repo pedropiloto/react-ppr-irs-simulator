@@ -13,6 +13,7 @@ import MoneyItem from '@material-ui/icons/Money';
 import Avatar from '@material-ui/core/Avatar';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Box from '@material-ui/core/Box';
+import * as gtag from '../lib/gtag';
 
 import Header from './Header';
 import Form from './Form';
@@ -115,6 +116,11 @@ function App() {
   }
 
   function handleSubmit() {
+    gtag.event({
+      action: 'submit_form',
+      category: 'PPR',
+      label: 'submit ppr data form',
+    });
     const calcResult = calc(age, dependents, collectableEarnings, totalLimitedDeductions);
     setResult(calcResult);
     handleOpen();
