@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import Document, {
   Html, Head, Main, NextScript,
 } from 'next/document';
-import { GA_TRACKING_ID } from '../lib/gtag';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -30,23 +29,21 @@ class MyDocument extends Document {
           {isProduction && (
             <>
               {/* Global Site Tag (gtag.js) - Google Analytics */}
-              <script
-                async
-                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-              />
-              <script
-                dangerouslySetInnerHTML={{
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8KK0WB0PN" />
+
+              <script>
+                dangerouslySetInnerHTML=
+                {{
                   __html: `
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-
-                    gtag('config', '${GA_TRACKING_ID}', {
+                    gtag('config', 'G-Q8KK0WB0PN', {
                       page_path: window.location.pathname,
-                    });
+                    });                  
                   `,
                 }}
-              />
+              </script>
             </>
           )}
         </Head>
@@ -55,46 +52,6 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
-  }
-
-  renderp() {
-    const { isProduction } = this.props;
-
-    return (
-      <html lang="en">
-        <Head>
-          <link rel="shortcut icon" type="image/x-icon" href={FavIcon} />
-
-          {/* We only want to add the scripts if in production */}
-          {isProduction && (
-            <>
-              {/* Global Site Tag (gtag.js) - Google Analytics */}
-              <script
-                async
-                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-              />
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', '${GA_TRACKING_ID}', {
-                      page_path: window.location.pathname,
-                    });
-                  `,
-                }}
-              />
-            </>
-          )}
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </html>
     );
   }
 }
