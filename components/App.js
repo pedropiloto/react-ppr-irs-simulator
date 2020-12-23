@@ -116,6 +116,7 @@ function App() {
   }
 
   function handleSubmit() {
+    console.log('cenas');
     gtag.event({
       action: 'submit_form',
       category: 'PPR',
@@ -123,6 +124,7 @@ function App() {
     });
     const calcResult = calc(age, dependents, collectableEarnings, totalLimitedDeductions);
     setResult(calcResult);
+    console.log('cenas', calcResult);
     handleOpen();
   }
 

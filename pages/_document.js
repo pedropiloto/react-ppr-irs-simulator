@@ -21,31 +21,31 @@ class MyDocument extends Document {
   }
 
   render() {
-    const { isProduction } = this.props;
     return (
       <Html lang="pt">
         <Head>
           <link href="https://fonts.googleapis.com/css?family=McLaren|Montserrat&display=swap" rel="stylesheet" />
-          {isProduction && (
-            <>
-              {/* Global Site Tag (gtag.js) - Google Analytics */}
-              <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8KK0WB0PN" />
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
 
-              <script>
-                dangerouslySetInnerHTML=
-                {{
-                  __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-Q8KK0WB0PN', {
-                      page_path: window.location.pathname,
-                    });                  
-                  `,
-                }}
-              </script>
-            </>
-          )}
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8KK0WB0PN" />
+
+          <script />
+
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Q8KK0WB0PN', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+
         </Head>
         <body>
           <Main />
